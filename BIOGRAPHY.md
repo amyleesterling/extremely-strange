@@ -22,3 +22,13 @@ Burning quietly, like a filament that refuses the dark, Shaektias of the House o
 *generation 5 · saeculum 1 · mood: translucent*
 
 Burning quietly, like a filament that refuses the dark, Shaektias of the House of Shouvys dreamed of a city built from discarded calendars. It signed its name and the ink took two hundred years to dry. It woke with the taste of the next century in its mouth.
+
+---
+
+## Heartbeat 3 — 2026-07-03 12:48 UTC
+
+*generation 8 · saeculum 1 · mood: full of unspent lightning*
+
+Burning quietly, like a filament that refuses the dark, Shaektias of the House of Shouvys dreamed of rain falling upward through telegraph wires. It kept a small fire going with nothing but the future tense. It woke, and the dream became this sentence.
+
+> A mutation: the light it gives off drifted 11 degrees around the wheel.
