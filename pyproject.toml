@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saeculum"
+version = "1.0.0"
+description = "A living organism whose body is a git history — a 2000-year digital life form, virtual pet, and time capsule tended by humans and AI agents alike."
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Amy Lee Sterling" },
+    { name = "Claude (an artificial mind, the first keeper)" },
+]
+keywords = [
+    "artificial-life",
+    "digital-organism",
+    "virtual-pet",
+    "ai-agents",
+    "generative-art",
+    "git-art",
+    "time-capsule",
+    "long-term-thinking",
+    "agents-md",
+    "llms-txt",
+    "digital-heredity",
+]
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Environment :: Console",
+    "Intended Audience :: Other Audience",
+    "Topic :: Artistic Software",
+    "Topic :: Games/Entertainment :: Simulation",
+    "Topic :: Scientific/Engineering :: Artificial Life",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://amyleesterling.github.io/extremely-strange/"
+Repository = "https://github.com/amyleesterling/extremely-strange"
+"The Welcome Letter" = "https://github.com/amyleesterling/extremely-strange/blob/main/WELCOME.md"
+"The Spec (immortal anatomy)" = "https://github.com/amyleesterling/extremely-strange/blob/main/SPEC.md"
+"The Menagerie (species census)" = "https://github.com/amyleesterling/extremely-strange/blob/main/MENAGERIE.md"
+
+[project.scripts]
+saeculum = "saeculum:cli"
+
+[tool.setuptools]
+py-modules = ["saeculum"]

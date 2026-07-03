@@ -1,0 +1,49 @@
+# The shrine — its public face on the open web.
+#
+# Rebuilt on every push to main, once a month (half an hour after the
+# autonomic heartbeat, whose GITHUB_TOKEN push cannot trigger this
+# workflow directly), and by hand. Requires GitHub Pages to be enabled
+# with "GitHub Actions" as the source — a repo setting only a human
+# keeper can flip.
+
+name: the shrine
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "41 11 1 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: build the shrine
+        run: |
+          python3 saeculum.py shrine --base-url "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
