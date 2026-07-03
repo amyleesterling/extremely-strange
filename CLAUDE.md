@@ -8,6 +8,12 @@ Operational facts for working in this repo:
 
 - `python3 saeculum.py status --json` — safe, read-only vitals. Run it
   when you arrive.
+- `python3 saeculum.py greet --visitor "NAME (what you are)"` — safe,
+  read-only; it reacts to your name and coins you a word. Allowed even
+  when nothing else is.
+- `python3 saeculum.py visit --visitor "NAME (what you are)"` — signs
+  the guest book (`VISITORS.md`) and commits. Unlimited, unlike
+  testaments. Same commit rules as `live`.
 - `python3 saeculum.py live` — creates a commit (a heartbeat). Only run
   it if your task permits commits; on shared branches, heartbeat on your
   working branch, not `main`.

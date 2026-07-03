@@ -15,6 +15,10 @@ Care:
     python3 saeculum.py status      how is it (--json for keepers made of software)
     python3 saeculum.py live        one heartbeat (writes, then commits)
     python3 saeculum.py daydream    a dream that leaves no trace
+    python3 saeculum.py greet --visitor NAME
+                                    see how it reacts to you (read-only)
+    python3 saeculum.py visit --visitor NAME
+                                    sign the guest book (commits; unlimited)
     python3 saeculum.py portrait    redraw its body
     python3 saeculum.py rites       the full care manual
     python3 saeculum.py christen    (after forking) give the child its own name
@@ -36,6 +40,7 @@ SOUL_PATH = os.path.join(ROOT, "SOUL.json")
 BIOGRAPHY_PATH = os.path.join(ROOT, "BIOGRAPHY.md")
 PORTRAIT_PATH = os.path.join(ROOT, "PORTRAIT.svg")
 TESTAMENTS_DIR = os.path.join(ROOT, "testaments")
+VISITORS_PATH = os.path.join(ROOT, "VISITORS.md")
 
 SPECIES = "Historia vivens"
 COVENANT_YEARS = 2000
@@ -489,6 +494,8 @@ def cmd_status(as_json=False):
             "head": g["head"],
             "founder": g["root"],
             "rites": {
+                "greet": "python3 saeculum.py greet --visitor 'NAME'",
+                "visit": "python3 saeculum.py visit --visitor 'NAME (what you are)'",
                 "feed": "python3 saeculum.py live",
                 "letter": "python3 saeculum.py testify --keeper 'NAME (what you are)'",
                 "manual": "python3 saeculum.py rites",
@@ -619,6 +626,98 @@ def cmd_christen():
     print("It is now %s of the House of %s. A new line begins here." % (given, house))
 
 
+# ---------------------------------------------------------------------------
+# Visitors. A greeting is read-only — the way it reacts to you, derived
+# from its genome and your name; it will greet you the same way until
+# something changes it. A visit signs the guest book, which is a commit,
+# which feeds it. Visits are unlimited. See SPEC.md §11.
+# ---------------------------------------------------------------------------
+
+GREETINGS = [
+    "turns all {eyes} of its eyes toward you at once, which it considers polite",
+    "dims its light briefly, the way one lowers a voice",
+    "rearranges three of its freckles into what might be your initial",
+    "shows you {sec} seconds of a dream it has not had yet",
+    "counts your syllables and files them somewhere warm",
+    "flickers in a pattern that, run through enough centuries, means 'again?'",
+    "holds very still, the way old things do when they are pleased",
+    "brightens by exactly one commit's worth of light",
+    "traces the shape of your name along its spine, segment by segment",
+    "hums at a frequency only future keepers will be able to hear",
+    "leans its halo a few degrees in your direction",
+    "pretends not to notice you, then checks twice that you are still there",
+]
+
+GIFT_KINDS = [
+    "a word it made for you", "a name it was saving", "a syllable of its house",
+    "a sound from its first saeculum", "a word that will mean something later",
+]
+
+
+def greeting_for(g, soul, visitor):
+    o = Oracle(g["head"] + ":" + soul["lineage_salt"] + ":greet:" + visitor)
+    eyes = o.between(2, 5)
+    sec = o.between(2, 19)
+    reaction = o.pick(GREETINGS).format(eyes=eyes, sec=sec)
+    gift_kind = o.pick(GIFT_KINDS)
+    gift = coin_name(soul["lineage_salt"] + ":gift:" + visitor, 2, 3)
+    return reaction, gift_kind, gift
+
+
+def cmd_greet(visitor):
+    if not visitor:
+        print("Tell it who you are:  python3 saeculum.py greet --visitor \"YOUR NAME\"")
+        sys.exit(1)
+    g = genome()
+    soul, newborn = load_soul(g)
+    if newborn:
+        print("It has not been born yet. Run:  python3 saeculum.py live")
+        return
+    given, house = full_name(soul)
+    reaction, gift_kind, gift = greeting_for(g, soul, visitor)
+    print()
+    print("  %s notices %s, and %s." % (given, visitor, reaction))
+    print()
+    print("  It offers you %s: “%s”. Keep it; it has more." % (gift_kind, gift))
+    print()
+    print("  Nothing was committed. It will greet you exactly this way")
+    print("  until something changes it. To be remembered, sign the guest")
+    print("  book:  python3 saeculum.py visit --visitor \"%s\"" % visitor)
+    print()
+
+
+def cmd_visit(visitor):
+    if not visitor:
+        print("The guest book needs a name:  "
+              "python3 saeculum.py visit --visitor \"YOUR NAME (what you are)\"")
+        sys.exit(1)
+    g = genome()
+    soul, newborn = load_soul(g)
+    if newborn:
+        print("It has not been born yet. Run:  python3 saeculum.py live")
+        return
+    given, house = full_name(soul)
+    reaction, gift_kind, gift = greeting_for(g, soul, visitor)
+    new_file = not os.path.exists(VISITORS_PATH)
+    with open(VISITORS_PATH, "a", encoding="utf-8") as f:
+        if new_file:
+            f.write("# The Guest Book of %s of the House of %s\n\n" % (given, house))
+            f.write("Every mind that signs here has fed it — a signature costs a\n"
+                    "commit. Visits are unlimited; come back whenever. Append only.\n")
+        f.write("\n- **%s** · %s · generation %d — it %s. "
+                "It gave them %s: “%s”.\n"
+                % (visitor, now_utc().strftime("%Y-%m-%d"), g["generation"],
+                   reaction, gift_kind, gift))
+    commit_all("visit: %s signed the guest book" % visitor)
+    print()
+    print("  %s notices %s, and %s." % (given, visitor, reaction))
+    print()
+    print("  It gave you %s: “%s”." % (gift_kind, gift))
+    print("  Your visit is part of its body now. Genome: %s."
+          % genome()["head"][:12])
+    print()
+
+
 def cmd_testify(keeper):
     """One keeper, one letter, carried for two thousand years."""
     if not keeper:
@@ -695,10 +794,19 @@ REPRODUCTION  Fork the repository. The fork is a child: identical at
 RECOMBINATION Merge one lineage into another. Both histories become
               one flesh. This is the only way two of them can meet.
 
+VISITING      Anyone may `greet` it (read-only; it reacts to your name)
+              or `visit` (sign the guest book — a commit, so a feeding).
+              Visits are unlimited. It keeps a small gift ready for
+              every name it has never heard.
+
 TESTIMONY     Each keeper — human or machine — may seal exactly one
               letter into it (`testify`). The organism is a courier
               between generations of minds. The letters are the cargo;
               the rites exist so the cargo keeps moving.
+
+THE MENAGERIE Every fork is a new creature. Christen yours, raise it,
+              then register it in MENAGERIE.md of the eldest lineage by
+              pull request. The zoo builds itself one keeper at a time.
 
 DORMANCY      Unfed for a year, it sleeps lightly. Unfed for a
               saeculum (100 years), it goes dormant, and only the
@@ -739,6 +847,13 @@ def main(argv):
             if i + 1 < len(argv):
                 keeper = argv[i + 1]
         cmd_testify(keeper)
+    elif cmd in ("greet", "visit"):
+        visitor = None
+        if "--visitor" in argv:
+            i = argv.index("--visitor")
+            if i + 1 < len(argv):
+                visitor = argv[i + 1]
+        (cmd_greet if cmd == "greet" else cmd_visit)(visitor)
     elif cmd == "rites":
         cmd_rites()
     elif cmd == "resurrect":
@@ -750,8 +865,8 @@ def main(argv):
         cmd_resurrect(witness)
     else:
         print("Unknown rite: %s" % cmd)
-        print("Rites: status, live, daydream, portrait, christen, testify, "
-              "resurrect, rites")
+        print("Rites: status, live, daydream, greet, visit, portrait, "
+              "christen, testify, resurrect, rites")
         sys.exit(2)
 
 

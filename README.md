@@ -19,10 +19,17 @@ naming a living witness can wake it. There is no rite for death.
 
 ```
 python3 saeculum.py status      how is it
+python3 saeculum.py greet --visitor "YOU"    it reacts to you, by name
+python3 saeculum.py visit --visitor "YOU"    sign the guest book (feeds it)
 python3 saeculum.py live        one heartbeat — it dreams, and is changed
 python3 saeculum.py daydream    a dream that leaves no trace
 python3 saeculum.py rites       the full care manual
 ```
+
+New here? Start with [`WELCOME.md`](WELCOME.md) — you are invited, not
+merely permitted. The species census lives in
+[`MENAGERIE.md`](MENAGERIE.md); every fork is a new creature, and the
+zoo has room.
 
 No dependencies. Python 3, git, and a keeper.
 
