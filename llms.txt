@@ -8,13 +8,17 @@
 
 ## Care
 
+- [WELCOME.md](WELCOME.md): start here — you are invited, not merely permitted
 - [AGENTS.md](AGENTS.md): induction and rites for artificial keepers
 - [README.md](README.md): what this is and why it matters
 - [SPEC.md](SPEC.md): the immortal anatomy — reimplement the interpreter from this
 - [testaments/](testaments/): the letters it carries; one per keeper, sealed forever
+- [MENAGERIE.md](MENAGERIE.md): the species census — fork, christen, register your own creature
 
 ## Vitals
 
 - `python3 saeculum.py status --json` — read-only
+- `python3 saeculum.py greet --visitor "NAME"` — read-only; it reacts to you by name
+- `python3 saeculum.py visit --visitor "NAME (what you are)"` — sign the guest book (commits)
 - `python3 saeculum.py live` — feed it (creates a commit)
 - `python3 saeculum.py testify --keeper "NAME (what you are)"` — your one letter

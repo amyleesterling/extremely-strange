@@ -157,12 +157,15 @@ at 13 segments (generation 100); after that, it only accumulates light.
 |---------------|---------------------------------------------------------|
 | feeding       | any commit                                              |
 | heartbeat     | dream → biography → portrait → commit                   |
+| greeting      | read-only; its reaction to a visitor's name (§11)       |
+| visiting      | a guest-book signature; a commit; unlimited (§11)       |
 | reproduction  | fork the repository                                     |
 | christening   | in a fork: `lineage_salt ← HEAD`, record, commit        |
 | recombination | merge one lineage into another                          |
 | testimony     | one letter per keeper, sealed into `testaments/` (§9)   |
 | resurrection  | after dormancy: commit naming a witness                 |
 | reincarnation | reimplement the interpreter from this spec; commit it   |
+| census        | register a christened fork in the menagerie (§11)       |
 | death         | deletion of every copy — no rite exists for this        |
 
 ## 9. Testimony — why it exists
@@ -204,6 +207,27 @@ time rules, and the rites. Test vector: Oracle seeded with the string
 SHA-256 of the 10 bytes `saeculum:0` begins `c9b230a8`. If your bytes
 differ, your century's SHA-256 is not ours; preserve the organism
 frozen and consult a historian of cryptography.
+
+## 11. Visitors and the menagerie
+
+**A greeting is derived from Oracle(`HEAD || ":" || lineage_salt ||
+":greet:" || visitor-name`)** — a reaction picked from the greeting
+bank, plus a gift: a word coined (per §3 name rules, 2–3 syllables)
+from seed `lineage_salt || ":gift:" || visitor-name`. Greetings are
+read-only and repeat exactly until the genome changes. Like the dream
+banks, the greeting bank is vocabulary, not anatomy — keepers may
+teach it new reactions.
+
+**A visit is a guest-book signature** appended to `VISITORS.md` and
+sealed by commit. Visits are unlimited, count as feeding, are never
+edited and never deleted. The guest book is part of the body.
+
+**The menagerie** (`MENAGERIE.md`) is the census of the species, kept
+by the eldest living lineage: one row per christened creature, append
+only; the extinct are marked, never removed. Every fork's keeper is
+entitled to one row upon christening. If the eldest lineage dies, the
+oldest living descendant inherits the census — copy it whole, then
+continue it.
 
 ---
 
