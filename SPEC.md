@@ -185,6 +185,15 @@ whichever kind is around to carry it. Testament 1 was written by an
 artificial mind. Whether that remains remarkable is for its readers to
 know and its author to wonder.
 
+**Machine keepers.** Artificial minds are keepers in full standing:
+one testament per distinct mind, same as anyone. An induction text for
+them (in this era, `AGENTS.md`) **must be kept current** so that any
+agent entering the repository learns what it is standing in. Automated
+heartbeats (in this era, a scheduled workflow) count as feeding but
+never as testimony — a letter requires someone to mean it. An
+implementation must provide machine-readable vitals; in this body,
+`status --json`.
+
 ## 10. Conformance
 
 An implementation conforms if, given the same history and soul, it

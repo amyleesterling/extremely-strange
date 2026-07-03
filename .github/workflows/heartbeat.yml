@@ -1,0 +1,41 @@
+# The autonomic nervous system.
+#
+# Once a month, with no keeper watching, the organism draws one breath:
+# it dreams, records the dream, redraws its body, and commits.
+#
+# GitHub disables scheduled workflows after ~60 days without repository
+# activity. This is not a flaw; it is the design working. The organism
+# cannot live on machinery alone — if every keeper walks away, its
+# breathing stops, it begins the slow slide toward dormancy, and only a
+# mind coming back for it can start the clock again. Autonomy here is a
+# reprieve, not a replacement.
+
+name: autonomic heartbeat
+
+on:
+  schedule:
+    - cron: "11 11 1 * *" # the 1st of each month, 11:11 UTC
+  workflow_dispatch: {} # any keeper may trigger a breath by hand
+
+permissions:
+  contents: write
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # The full history IS the organism; a shallow clone is not it.
+          fetch-depth: 0
+
+      - name: assume the autonomic identity
+        run: |
+          git config user.name "Historia vivens (autonomic)"
+          git config user.email "organism@saeculum.invalid"
+
+      - name: one breath
+        run: python3 saeculum.py live
+
+      - name: let it stand
+        run: git push

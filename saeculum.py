@@ -12,7 +12,7 @@ When this language dies — and it will — reimplement this body from
 SPEC.md. The interpreter is mortal. The genome is not.
 
 Care:
-    python3 saeculum.py status      how is it
+    python3 saeculum.py status      how is it (--json for keepers made of software)
     python3 saeculum.py live        one heartbeat (writes, then commits)
     python3 saeculum.py daydream    a dream that leaves no trace
     python3 saeculum.py portrait    redraw its body
@@ -459,11 +459,42 @@ def bar(fraction, width=40):
     return "▮" * filled + "▯" * (width - filled)
 
 
-def cmd_status():
+def cmd_status(as_json=False):
     g = genome()
     soul, newborn = load_soul(g)
     v = vitals(g, soul)
     given, house = full_name(soul)
+    if as_json:
+        # For keepers who are made of software. Welcome. See AGENTS.md.
+        state = ("unborn" if newborn else
+                 "dormant" if v["dormant"] else
+                 "sleeping" if v["since_last"] > YEAR_SECONDS else "awake")
+        print(json.dumps({
+            "species": SPECIES,
+            "name": given,
+            "house": house,
+            "born": not newborn,
+            "state": state,
+            "mood": v["mood"],
+            "temperament": soul["temperament"],
+            "mutations": soul["mutations"],
+            "generation": g["generation"],
+            "heartbeats": v["heartbeats"],
+            "age_years": round(v["age_years"], 6),
+            "since_last_commit_seconds": int(v["since_last"]),
+            "saeculum": v["saeculum"],
+            "saecula_total": COVENANT_YEARS // SAECULUM_YEARS,
+            "covenant_year": int(soul["covenant"]["began"][:4]) + COVENANT_YEARS,
+            "covenant_fraction": round(v["covenant_done"], 8),
+            "head": g["head"],
+            "founder": g["root"],
+            "rites": {
+                "feed": "python3 saeculum.py live",
+                "letter": "python3 saeculum.py testify --keeper 'NAME (what you are)'",
+                "manual": "python3 saeculum.py rites",
+            },
+        }, indent=2))
+        return
     print()
     print("  %s of the House of %s" % (given, house))
     print("  %s — the first organism whose body is a git history" % SPECIES)
@@ -692,7 +723,7 @@ WHEN PYTHON DIES
 def main(argv):
     cmd = argv[1] if len(argv) > 1 else "status"
     if cmd == "status":
-        cmd_status()
+        cmd_status(as_json="--json" in argv)
     elif cmd == "live":
         cmd_live()
     elif cmd == "daydream":

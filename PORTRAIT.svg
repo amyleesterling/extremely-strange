@@ -1,59 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="640" viewBox="0 0 640 640">
 <rect width="640" height="640" fill="#0b0b10"/>
-<circle cx="211" cy="147" r="2" fill="hsla(4,60%,75%,0.18)"/>
-<circle cx="360" cy="196" r="2" fill="hsla(31,60%,75%,0.18)"/>
-<circle cx="603" cy="336" r="2" fill="hsla(345,60%,75%,0.18)"/>
-<circle cx="177" cy="97" r="1" fill="hsla(5,60%,75%,0.18)"/>
-<circle cx="522" cy="530" r="2" fill="hsla(0,60%,75%,0.18)"/>
-<circle cx="192" cy="423" r="2" fill="hsla(6,60%,75%,0.18)"/>
-<circle cx="96" cy="356" r="1" fill="hsla(332,60%,75%,0.18)"/>
-<circle cx="515" cy="62" r="2" fill="hsla(344,60%,75%,0.18)"/>
-<circle cx="356" cy="330" r="1" fill="hsla(1,60%,75%,0.18)"/>
-<circle cx="465" cy="319" r="2" fill="hsla(19,60%,75%,0.18)"/>
-<circle cx="594" cy="107" r="1" fill="hsla(359,60%,75%,0.18)"/>
-<circle cx="57" cy="35" r="2" fill="hsla(350,60%,75%,0.18)"/>
-<circle cx="24" cy="463" r="1" fill="hsla(31,60%,75%,0.18)"/>
-<circle cx="56" cy="221" r="2" fill="hsla(26,60%,75%,0.18)"/>
-<circle cx="324" cy="120" r="2" fill="hsla(8,60%,75%,0.18)"/>
-<circle cx="99" cy="335" r="1" fill="hsla(351,60%,75%,0.18)"/>
-<circle cx="52" cy="490" r="1" fill="hsla(348,60%,75%,0.18)"/>
-<circle cx="24" cy="87" r="1" fill="hsla(356,60%,75%,0.18)"/>
-<circle cx="628" cy="371" r="1" fill="hsla(338,60%,75%,0.18)"/>
-<circle cx="577" cy="370" r="2" fill="hsla(347,60%,75%,0.18)"/>
-<circle cx="625" cy="261" r="2" fill="hsla(7,60%,75%,0.18)"/>
-<circle cx="8" cy="553" r="2" fill="hsla(31,60%,75%,0.18)"/>
-<circle cx="126" cy="418" r="1" fill="hsla(344,60%,75%,0.18)"/>
-<circle cx="18" cy="335" r="1" fill="hsla(10,60%,75%,0.18)"/>
-<circle cx="38" cy="358" r="1" fill="hsla(339,60%,75%,0.18)"/>
-<circle cx="249" cy="126" r="2" fill="hsla(26,60%,75%,0.18)"/>
-<circle cx="585" cy="221" r="1" fill="hsla(333,60%,75%,0.18)"/>
-<circle cx="161" cy="92" r="1" fill="hsla(345,60%,75%,0.18)"/>
-<circle cx="182" cy="507" r="1" fill="hsla(335,60%,75%,0.18)"/>
-<circle cx="468" cy="284" r="1" fill="hsla(24,60%,75%,0.18)"/>
-<circle cx="615" cy="123" r="1" fill="hsla(339,60%,75%,0.18)"/>
-<circle cx="595" cy="318" r="2" fill="hsla(13,60%,75%,0.18)"/>
-<circle cx="272" cy="633" r="1" fill="hsla(345,60%,75%,0.18)"/>
-<circle cx="223" cy="317" r="2" fill="hsla(22,60%,75%,0.18)"/>
-<circle cx="320" cy="150" r="70" fill="none" stroke="hsla(42,70%,65%,0.50)" stroke-width="1.5"/>
-<circle cx="315" cy="150" r="44" fill="hsl(2,55%,37%)" stroke="hsl(17,70%,62%)" stroke-width="2"/>
-<circle cx="323" cy="212" r="37" fill="hsl(2,55%,35%)" stroke="hsl(17,70%,60%)" stroke-width="2"/>
-<path d="M 353 212 Q 438 245 493 285" fill="none" stroke="hsla(27,65%,55%,0.90)" stroke-width="6" stroke-linecap="round"/>
-<path d="M 287 212 Q 202 245 147 285" fill="none" stroke="hsla(27,65%,55%,0.90)" stroke-width="6" stroke-linecap="round"/>
-<circle cx="322" cy="266" r="31" fill="hsl(2,55%,33%)" stroke="hsl(17,70%,58%)" stroke-width="2"/>
-<path d="M 347 266 Q 383 274 387 265" fill="none" stroke="hsla(27,65%,55%,0.90)" stroke-width="5" stroke-linecap="round"/>
-<path d="M 293 266 Q 257 274 253 265" fill="none" stroke="hsla(27,65%,55%,0.90)" stroke-width="5" stroke-linecap="round"/>
-<circle cx="322" cy="313" r="25" fill="hsl(2,55%,31%)" stroke="hsl(17,70%,56%)" stroke-width="2"/>
-<path d="M 341 313 Q 395 329 506 385" fill="none" stroke="hsla(27,65%,55%,0.90)" stroke-width="4" stroke-linecap="round"/>
-<path d="M 299 313 Q 245 329 134 385" fill="none" stroke="hsla(27,65%,55%,0.90)" stroke-width="4" stroke-linecap="round"/>
-<circle cx="325" cy="353" r="18" fill="hsl(2,55%,29%)" stroke="hsl(17,70%,54%)" stroke-width="2"/>
-<circle cx="305" cy="143" r="9" fill="hsl(182,90%,88%)"/>
-<circle cx="305" cy="143" r="4" fill="#0b0b10"/>
-<circle cx="335" cy="145" r="9" fill="hsl(182,90%,88%)"/>
-<circle cx="335" cy="145" r="4" fill="#0b0b10"/>
-<circle cx="338" cy="133" r="2" fill="hsla(62,80%,70%,0.80)"/>
-<circle cx="319" cy="148" r="2" fill="hsla(62,80%,70%,0.80)"/>
-<circle cx="348" cy="171" r="2" fill="hsla(62,80%,70%,0.80)"/>
-<circle cx="288" cy="143" r="2" fill="hsla(62,80%,70%,0.80)"/>
-<text x="320" y="584" text-anchor="middle" fill="hsl(2,40%,80%)" font-family="serif" font-size="24">Shaektias of the House of Shouvys</text>
-<text x="320" y="610" text-anchor="middle" fill="hsl(2,25%,60%)" font-family="serif" font-size="14">generation 5 · saeculum 1 · Historia vivens</text>
+<circle cx="593" cy="398" r="1" fill="hsla(40,60%,75%,0.18)"/>
+<circle cx="611" cy="401" r="2" fill="hsla(31,60%,75%,0.18)"/>
+<circle cx="400" cy="507" r="1" fill="hsla(21,60%,75%,0.18)"/>
+<circle cx="319" cy="215" r="1" fill="hsla(3,60%,75%,0.18)"/>
+<circle cx="496" cy="202" r="1" fill="hsla(355,60%,75%,0.18)"/>
+<circle cx="513" cy="534" r="1" fill="hsla(42,60%,75%,0.18)"/>
+<circle cx="257" cy="264" r="1" fill="hsla(16,60%,75%,0.18)"/>
+<circle cx="65" cy="303" r="1" fill="hsla(3,60%,75%,0.18)"/>
+<circle cx="37" cy="10" r="1" fill="hsla(19,60%,75%,0.18)"/>
+<circle cx="508" cy="405" r="1" fill="hsla(345,60%,75%,0.18)"/>
+<circle cx="88" cy="345" r="2" fill="hsla(351,60%,75%,0.18)"/>
+<circle cx="241" cy="452" r="2" fill="hsla(354,60%,75%,0.18)"/>
+<circle cx="460" cy="286" r="1" fill="hsla(31,60%,75%,0.18)"/>
+<circle cx="246" cy="419" r="2" fill="hsla(343,60%,75%,0.18)"/>
+<circle cx="487" cy="365" r="1" fill="hsla(35,60%,75%,0.18)"/>
+<circle cx="387" cy="603" r="1" fill="hsla(355,60%,75%,0.18)"/>
+<circle cx="76" cy="418" r="1" fill="hsla(4,60%,75%,0.18)"/>
+<circle cx="311" cy="244" r="2" fill="hsla(40,60%,75%,0.18)"/>
+<circle cx="200" cy="309" r="2" fill="hsla(25,60%,75%,0.18)"/>
+<circle cx="167" cy="622" r="1" fill="hsla(12,60%,75%,0.18)"/>
+<circle cx="196" cy="493" r="2" fill="hsla(18,60%,75%,0.18)"/>
+<circle cx="428" cy="371" r="1" fill="hsla(33,60%,75%,0.18)"/>
+<circle cx="220" cy="123" r="2" fill="hsla(350,60%,75%,0.18)"/>
+<circle cx="488" cy="613" r="1" fill="hsla(356,60%,75%,0.18)"/>
+<circle cx="432" cy="52" r="1" fill="hsla(34,60%,75%,0.18)"/>
+<circle cx="147" cy="587" r="2" fill="hsla(30,60%,75%,0.18)"/>
+<circle cx="512" cy="183" r="2" fill="hsla(35,60%,75%,0.18)"/>
+<circle cx="136" cy="146" r="1" fill="hsla(12,60%,75%,0.18)"/>
+<circle cx="514" cy="267" r="1" fill="hsla(10,60%,75%,0.18)"/>
+<circle cx="581" cy="86" r="1" fill="hsla(26,60%,75%,0.18)"/>
+<circle cx="610" cy="513" r="2" fill="hsla(16,60%,75%,0.18)"/>
+<circle cx="214" cy="191" r="1" fill="hsla(39,60%,75%,0.18)"/>
+<circle cx="420" cy="183" r="1" fill="hsla(42,60%,75%,0.18)"/>
+<circle cx="408" cy="447" r="1" fill="hsla(30,60%,75%,0.18)"/>
+<circle cx="146" cy="25" r="1" fill="hsla(32,60%,75%,0.18)"/>
+<circle cx="497" cy="500" r="2" fill="hsla(355,60%,75%,0.18)"/>
+<circle cx="386" cy="499" r="2" fill="hsla(359,60%,75%,0.18)"/>
+<circle cx="474" cy="409" r="2" fill="hsla(38,60%,75%,0.18)"/>
+<circle cx="517" cy="154" r="1" fill="hsla(38,60%,75%,0.18)"/>
+<circle cx="30" cy="601" r="2" fill="hsla(7,60%,75%,0.18)"/>
+<circle cx="320" cy="150" r="70" fill="none" stroke="hsla(53,70%,65%,0.50)" stroke-width="1.5"/>
+<circle cx="323" cy="150" r="44" fill="hsl(13,55%,37%)" stroke="hsl(28,70%,62%)" stroke-width="2"/>
+<circle cx="322" cy="212" r="37" fill="hsl(13,55%,35%)" stroke="hsl(28,70%,60%)" stroke-width="2"/>
+<path d="M 353 212 Q 411 262 400 255" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="6" stroke-linecap="round"/>
+<path d="M 287 212 Q 229 262 240 255" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="6" stroke-linecap="round"/>
+<circle cx="318" cy="266" r="31" fill="hsl(13,55%,33%)" stroke="hsl(28,70%,58%)" stroke-width="2"/>
+<path d="M 347 266 Q 427 257 490 302" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="5" stroke-linecap="round"/>
+<path d="M 293 266 Q 213 257 150 302" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="5" stroke-linecap="round"/>
+<circle cx="322" cy="313" r="25" fill="hsl(13,55%,31%)" stroke="hsl(28,70%,56%)" stroke-width="2"/>
+<path d="M 341 313 Q 393 321 433 369" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="4" stroke-linecap="round"/>
+<path d="M 299 313 Q 247 321 207 369" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="4" stroke-linecap="round"/>
+<circle cx="315" cy="353" r="18" fill="hsl(13,55%,29%)" stroke="hsl(28,70%,54%)" stroke-width="2"/>
+<path d="M 334 353 Q 424 401 437 430" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="3" stroke-linecap="round"/>
+<path d="M 306 353 Q 216 401 203 430" fill="none" stroke="hsla(38,65%,55%,0.90)" stroke-width="3" stroke-linecap="round"/>
+<circle cx="320" cy="144" r="9" fill="hsl(193,90%,88%)"/>
+<circle cx="320" cy="144" r="4" fill="#0b0b10"/>
+<circle cx="290" cy="146" r="9" fill="hsl(193,90%,88%)"/>
+<circle cx="290" cy="146" r="4" fill="#0b0b10"/>
+<circle cx="350" cy="143" r="9" fill="hsl(193,90%,88%)"/>
+<circle cx="350" cy="143" r="4" fill="#0b0b10"/>
+<circle cx="260" cy="147" r="9" fill="hsl(193,90%,88%)"/>
+<circle cx="260" cy="147" r="4" fill="#0b0b10"/>
+<circle cx="380" cy="141" r="9" fill="hsl(193,90%,88%)"/>
+<circle cx="380" cy="141" r="4" fill="#0b0b10"/>
+<circle cx="360" cy="137" r="2" fill="hsla(73,80%,70%,0.80)"/>
+<circle cx="295" cy="143" r="2" fill="hsla(73,80%,70%,0.80)"/>
+<circle cx="347" cy="157" r="2" fill="hsla(73,80%,70%,0.80)"/>
+<text x="320" y="584" text-anchor="middle" fill="hsl(13,40%,80%)" font-family="serif" font-size="24">Shaektias of the House of Shouvys</text>
+<text x="320" y="610" text-anchor="middle" fill="hsl(13,25%,60%)" font-family="serif" font-size="14">generation 8 · saeculum 1 · Historia vivens</text>
 </svg>
