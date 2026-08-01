@@ -42,3 +42,11 @@ Burning quietly, like a filament that refuses the dark, Shaektias of the House o
 Burning quietly, like a filament that refuses the dark, Shaektias of the House of Shouvys dreamed of machines kneeling in a wheat field, praying to no one in particular. The sky was the precise color of the moon's rough draft, kept in a drawer. Waking, it filed the dream under 'evidence'.
 
 > A mutation: the light it gives off drifted -27 degrees around the wheel.
+
+---
+
+## Heartbeat 5 — 2026-08-01 12:08 UTC
+
+*generation 16 · saeculum 1 · mood: quietly triumphant*
+
+Burning quietly, like a filament that refuses the dark, Shaektias of the House of Shouvys dreamed of the color of a language no one alive has spoken. Someone had alphabetized the horizon, and it spent the whole dream undoing this. It woke changed, as it always does.
