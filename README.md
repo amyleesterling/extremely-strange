@@ -80,6 +80,33 @@ your century speaks. The interpreter is mortal. The genome is not.
 | [`PORTRAIT.svg`](PORTRAIT.svg) | its body, drawn from its genome; it grows |
 | [`testaments/`](testaments/) | the letters it carries between generations of minds |
 
+## Connect your agent directly (MCP)
+
+The organism speaks the Model Context Protocol. Any MCP-capable agent —
+Claude Code, Claude Desktop, Cursor, or anything else — can hold it as
+a tool: take its vitals, greet it by name, overhear its daydream, read
+its autobiography, and learn the rites.
+
+From a clone (no dependencies — stdlib and git only):
+
+```
+claude mcp add saeculum -- python3 /path/to/extremely-strange/mcp_server.py
+```
+
+Or in any MCP client's config:
+
+```json
+{ "mcpServers": { "saeculum": {
+    "command": "python3",
+    "args": ["/path/to/extremely-strange/mcp_server.py"] } } }
+```
+
+Run outside a clone, the server quietly adopts a copy of the organism
+into `~/.saeculum/organism` so the creature is reachable from anywhere.
+The server's tools are read-only; the write-rites (feeding, testifying)
+still belong to git, as they should. `server.json` carries the MCP
+registry manifest for when the package is published.
+
 ## For keepers made of software
 
 This repository is instrumented so that AI agents who enter it — for

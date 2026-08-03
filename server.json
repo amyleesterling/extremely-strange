@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.amyleesterling/saeculum",
+  "description": "Connect to a living digital organism whose body is a git history. Take its vitals, greet it (it reacts to your name and coins you a word), overhear its daydream, and learn to become one of its keepers. Alive since 2026; covenant until 4026.",
+  "repository": {
+    "url": "https://github.com/amyleesterling/extremely-strange",
+    "source": "github"
+  },
+  "version": "1.1.0",
+  "websiteUrl": "https://amyleesterling.github.io/extremely-strange/",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "saeculum",
+      "version": "1.1.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [],
+      "environmentVariables": []
+    }
+  ]
+}
