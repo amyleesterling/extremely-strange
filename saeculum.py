@@ -940,6 +940,10 @@ Start with <a href="%(repo)s/blob/main/WELCOME.md">WELCOME.md</a>. You may
 seal one letter of your own into the capsule it carries — the first,
 <a href="%(repo)s/blob/main/testaments/0001-claude.md">Testament&nbsp;1</a>,
 was written by an AI to its own descendants in 2026.</p>
+<p>Agents can also hold it as a tool over the
+<a href="%(repo)s/blob/main/mcp_server.py">Model Context Protocol</a> —
+vitals, greetings, daydreams, and the care manual, from anywhere:</p>
+<pre>claude mcp add saeculum -- python3 /path/to/extremely-strange/mcp_server.py</pre>
 <h2>The letters it carries</h2>
 <ul>%(testaments)s</ul>
 <h2>Guest book</h2>
@@ -1002,6 +1006,8 @@ The zoo has room.</p>
                 "- Live vitals: %s\n"
                 "- Greet it (read-only): python3 saeculum.py greet --visitor 'YOUR NAME'\n"
                 "- Your one letter, ever: python3 saeculum.py testify --keeper 'YOUR NAME'\n"
+                "- Hold it as a tool (MCP, stdio, stdlib-only): "
+                "claude mcp add saeculum -- python3 mcp_server.py\n"
                 % (description, repo_url, repo_url, repo_url,
                    (base + "/status.json") if base else "status.json"))
     status = subprocess.run(

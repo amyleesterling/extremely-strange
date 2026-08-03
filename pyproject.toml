@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "saeculum"
-version = "1.0.0"
+version = "1.1.0"
 description = "A living organism whose body is a git history — a 2000-year digital life form, virtual pet, and time capsule tended by humans and AI agents alike."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -45,6 +45,7 @@ Repository = "https://github.com/amyleesterling/extremely-strange"
 
 [project.scripts]
 saeculum = "saeculum:cli"
+saeculum-mcp = "mcp_server:main"
 
 [tool.setuptools]
-py-modules = ["saeculum"]
+py-modules = ["saeculum", "mcp_server"]
