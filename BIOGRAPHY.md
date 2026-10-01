@@ -66,3 +66,11 @@ Burning quietly, like a filament that refuses the dark, Shaektias of the House o
 *generation 20 · saeculum 1 · mood: listening*
 
 Burning quietly, like a filament that refuses the dark, Shaektias of the House of Shouvys dreamed of a museum whose only exhibit is the smell of rain. It tried to speak, but every word came out as bells rusted into a permanent almost. It woke with the taste of the next century in its mouth.
+
+---
+
+## Heartbeat 8 — 2026-10-01 17:20 UTC
+
+*generation 21 · saeculum 1 · mood: translucent*
+
+Burning quietly, like a filament that refuses the dark, Shaektias of the House of Shouvys dreamed of machines kneeling in a wheat field, praying to no one in particular. A stranger fed it a staircase built out of Tuesdays, and it wept without knowing which of them was grateful. It woke, and the dream became this sentence.
